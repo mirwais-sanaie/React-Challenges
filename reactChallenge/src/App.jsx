@@ -1,10 +1,9 @@
-import "./App.css";
+import TabsChange from "./components/Day-1/TabsChange";
 
 function App() {
-  const num = 10;
   return (
     <div>
-      <h4>How are {num}</h4>
+      <TabsChange />
     </div>
   );
 }

@@ -1,9 +1,11 @@
-import TabsChange from "./components/Day-1/TabsChange";
+// import TabsChange from "./components/Day-1/TabsChange";
+import DataTable from "./components/Day-2/DataTable";
 
 function App() {
   return (
     <div>
-      <TabsChange />
+      {/* <TabsChange /> */}
+      <DataTable />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const data = [
   {
     id: 1,
@@ -44,27 +46,62 @@ const data = [
 ];
 
 function FileExplorer() {
+  const [expandedIds, setExpandedIds] = useState(new Set());
+
+  function handleSetChildren(id) {
+    const newExpandedIds = new Set(expandedIds);
+
+    if (newExpandedIds.has(id)) {
+      newExpandedIds.delete(id);
+    } else {
+      newExpandedIds.add(id);
+    }
+    setExpandedIds(newExpandedIds);
+  }
+
   return (
     <div>
       <h1>FILE EXPLORER</h1>
-      <ul>
+      <ul role="tree">
         {data.map((el) => (
-          <FileItem key={el.id} item={el} />
+          <FileItem
+            key={el.id}
+            item={el}
+            handleSetChildren={handleSetChildren}
+            expandedIds={expandedIds}
+          />
         ))}
       </ul>
     </div>
   );
 }
 
-function FileItem({ item }) {
+function FileItem({ item, handleSetChildren, expandedIds }) {
+  const hasChildren = item.children?.length > 0;
+  const isExpanded = expandedIds.has(item.id);
+
   return (
-    <li style={{ cursor: "pointer" }}>
-      {`${item.name} ${item?.children && "+"}`}
-      <ul>
-        {item?.children?.map((el) => (
-          <FileItem key={el.id} item={el} />
-        ))}
-      </ul>
+    <li>
+      <div
+        onClick={() => hasChildren && handleSetChildren(item.id)}
+        style={{ cursor: hasChildren ? "pointer" : "default" }}
+        aria-expanded={isExpanded}
+        role="treeitem"
+      >
+        {`${item.name} ${hasChildren ? (isExpanded ? "-" : "+") : ""}`}
+      </div>
+      {hasChildren && isExpanded && (
+        <ul role="group">
+          {item.children.map((child) => (
+            <FileItem
+              key={child.id}
+              item={child}
+              handleSetChildren={handleSetChildren}
+              expandedIds={expandedIds}
+            />
+          ))}
+        </ul>
+      )}
     </li>
   );
 }

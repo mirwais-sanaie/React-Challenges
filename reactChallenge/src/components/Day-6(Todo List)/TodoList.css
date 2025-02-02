@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+.search-container {
+  display: flex;
+  gap: 10px;
+  padding-left: 40px;
+}
+.container h1 {
+  padding-left: 40px;
+}
+ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+ul li {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  justify-content: space-between;
+}

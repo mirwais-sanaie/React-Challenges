@@ -3,14 +3,17 @@ import styles from "./StarRating.module.css";
 
 function StarRating() {
   const [hovering, setHovering] = useState(0);
-  const [activeStars, setActiveStars] = useState([]);
+  const [activeStars, setActiveStars] = useState(0);
 
   function handleHovering(index) {
     setHovering(index + 1);
     console.log(hovering);
   }
+  function handleOut() {
+    setHovering(0);
+  }
   function handleActive(index) {
-    setActiveStars([...activeStars, index]);
+    setActiveStars(index);
     console.log(activeStars);
   }
 
@@ -24,12 +27,19 @@ function StarRating() {
             <span
               key={ind}
               onMouseEnter={() => handleHovering(ind)}
-              onMouseLeave={() => handleActive(ind)}
+              onMouseLeave={() => handleOut()}
+              onClick={() => handleActive(ind)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={styles.starIcon}
-                fill="none"
+                fill={`${
+                  hovering && hovering > ind
+                    ? "yellow"
+                    : !hovering && activeStars >= ind
+                    ? "yellow"
+                    : ""
+                }`}
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth="2"

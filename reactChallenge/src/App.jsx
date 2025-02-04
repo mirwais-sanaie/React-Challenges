@@ -3,7 +3,9 @@
 // import FileExplorer from "./components/Day-3(File Explorer)/FileExplorer";
 // import Modal from "./components/Day-4(Modal Component)/Modal";
 // import StarRating from "./components/Day-5(StarRating)/StarRating";
-import TodoList from "./components/Day-6(Todo List)/TodoList";
+// import TodoList from "./components/Day-6(Todo List)/TodoList";
+
+import TraficLight from "./components/Day-7(Trafic Light)/TraficLight";
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
       {/* <FileExplorer /> */}
       {/* <Modal /> */}
       {/* <StarRating /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <TraficLight />
     </div>
   );
 }

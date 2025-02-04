@@ -5,7 +5,8 @@
 // import StarRating from "./components/Day-5(StarRating)/StarRating";
 // import TodoList from "./components/Day-6(Todo List)/TodoList";
 
-import TraficLight from "./components/Day-7(Trafic Light)/TraficLight";
+// import TraficLight from "./components/Day-7(Trafic Light)/TraficLight";
+import DigitalClock from "./components/Day-8(Digital Clock)/DigitalClock";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <Modal /> */}
       {/* <StarRating /> */}
       {/* <TodoList /> */}
-      <TraficLight />
+      {/* <TraficLight /> */}
+      <DigitalClock />
     </div>
   );
 }

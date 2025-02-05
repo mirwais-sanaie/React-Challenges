@@ -3,8 +3,7 @@ import "./DigitalClock.css";
 
 function DigitalClock() {
   const [clock, setClock] = useState("");
-  const newDate = new Date().toLocaleTimeString();
-  console.log(newDate);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setClock(new Date().toLocaleTimeString());

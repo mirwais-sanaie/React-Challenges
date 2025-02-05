@@ -1,0 +1,101 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#game-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#tic-tac-toe {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.cell.x {
+  color: #ffd700;
+}
+
+.cell.o {
+  color: #00ffff;
+}
+
+#reset {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#reset:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+#status {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  margin-top: 20px;
+  height: 1.5em;
+}
+
+@keyframes win-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.win {
+  animation: win-animation 0.5s ease-in-out;
+}

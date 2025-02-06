@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./TicTacToe.css";
+import "./TicTacToeCopy.css";
 
-function TicTacToe() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
-  const [winner, setWinner] = useState(null);
+function TicTacToeCopy() {
+  const [board, setBoard] = useState(new Array(9).fill(null)); //[null , null , null.... , null[index =9]]
+  const [xIsTurn, setXisTurn] = useState(true);
+  const [winner, setWinner] = useState("");
 
   function calculateWinner(board) {
-    const winningCombinations = [
+    const winningLines = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -17,13 +17,14 @@ function TicTacToe() {
       [0, 4, 8],
       [2, 4, 6],
     ];
-    for (const combination of winningCombinations) {
-      const [a, b, c] = combination;
+    for (const winnings of winningLines) {
+      const [a, b, c] = winnings;
+
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        setWinner(board[a]);
         return board[a];
       }
     }
-
     if (board.every((cell) => cell !== null)) {
       return "Draw";
     }
@@ -35,7 +36,7 @@ function TicTacToe() {
     if (board[index] || winner) return;
 
     const newBoard = [...board];
-    newBoard[index] = isXNext ? "X" : "O";
+    newBoard[index] = xIsTurn ? "X" : "O";
     setBoard(newBoard);
 
     const newWinner = calculateWinner(newBoard);
@@ -43,21 +44,8 @@ function TicTacToe() {
     if (newWinner) {
       setWinner(newWinner);
     } else {
-      setIsXNext(!isXNext);
+      setXisTurn(!xIsTurn);
     }
-  }
-
-  function getStatusMessage() {
-    if (winner) {
-      return winner === "Draw" ? "It's a Draw!" : `Winner: ${winner}`;
-    }
-    return `Next Player: ${isXNext ? "X" : "O"}`;
-  }
-
-  function resetGame() {
-    setBoard(Array(9).fill(null));
-    setIsXNext(true);
-    setWinner(null);
   }
 
   return (
@@ -75,12 +63,13 @@ function TicTacToe() {
           </div>
         ))}
       </div>
-      <button id="reset" onClick={resetGame}>
+      {/* <button id="reset" onClick={resetGame}>
         Reset Game
-      </button>
-      <div id="status">{getStatusMessage()}</div>
+      </button> */}
+      {/* <div id="status">{getStatusMessage()}</div> */}
+      <div id="status">{winner}</div>
     </div>
   );
 }
 
-export default TicTacToe;
+export default TicTacToeCopy;

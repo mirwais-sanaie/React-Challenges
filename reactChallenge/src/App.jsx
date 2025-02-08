@@ -5,10 +5,12 @@
 // import StarRating from "./components/Day-5(StarRating)/StarRating";
 // import TodoList from "./components/Day-6(Todo List)/TodoList";
 
+import JobBoard from "./components/Day-11(Job Board-readMore)/JobBoard";
+
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
 // import Slider from "./components/Day-10(image slider)/Slider";
-import SliderCopy from "./components/Day-10(image slider)/SliderCopy";
+// import SliderCopy from "./components/Day-10(image slider)/SliderCopy";
 
 // import TraficLight from "./components/Day-7(Trafic Light)/TraficLight";
 // import DigitalClock from "./components/Day-8(Digital Clock)/DigitalClock";
@@ -27,7 +29,8 @@ function App() {
       {/* <TicTacToe /> */}
       {/* <TicTacToeCopy /> */}
       {/* <Slider /> */}
-      <SliderCopy />
+      {/* <SliderCopy /> */}
+      <JobBoard />
     </div>
   );
 }

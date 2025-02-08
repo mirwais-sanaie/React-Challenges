@@ -1,0 +1,49 @@
+.job-board {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: orange;
+}
+
+.job-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.job-item h2 {
+  margin: 0 0 10px;
+}
+
+.job-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.job-item a:hover {
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

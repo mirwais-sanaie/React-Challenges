@@ -1,0 +1,19 @@
+.button-list li {
+  margin-bottom: 10px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 120px auto 0;
+}
+.container ul {
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px;
+}
+.button-list {
+  width: 20%;
+  text-align: center;
+  list-style: none;
+}

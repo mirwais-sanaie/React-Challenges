@@ -40,10 +40,6 @@ function TransferList() {
     setSource([]);
   }
 
-  function hasSelected(list) {
-    return list.some((item) => item.checked);
-  }
-
   return (
     <div>
       <div className="container">

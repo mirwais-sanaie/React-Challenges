@@ -8,7 +8,8 @@
 // import JobBoard from "./components/Day-11(Job Board-readMore)/JobBoard";
 // import StopWatch from "./components/Day-12(StopWatch)/StopWatch";
 // import TransferList from "./components/Day-13(Transfer List)/TransferList";
-import LightBoxGallery from "./components/Day-14(Light box gallery)/LightBoxGallery";
+// import LightBoxGallery from "./components/Day-14(Light box gallery)/LightBoxGallery";
+import ParentCom from "./components/Day-15(Toast Notification)/ParentCom";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -36,7 +37,8 @@ function App() {
       {/* <JobBoard /> */}
       {/* <StopWatch /> */}
       {/* <TransferList /> */}
-      <LightBoxGallery />
+      {/* <LightBoxGallery /> */}
+      <ParentCom />
     </div>
   );
 }

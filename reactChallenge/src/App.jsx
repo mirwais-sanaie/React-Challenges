@@ -9,7 +9,7 @@
 // import StopWatch from "./components/Day-12(StopWatch)/StopWatch";
 // import TransferList from "./components/Day-13(Transfer List)/TransferList";
 // import LightBoxGallery from "./components/Day-14(Light box gallery)/LightBoxGallery";
-import ParentCom from "./components/Day-15(Toast Notification)/ParentCom";
+import Test from "./components/Day-16(Test)/Test";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -38,7 +38,8 @@ function App() {
       {/* <StopWatch /> */}
       {/* <TransferList /> */}
       {/* <LightBoxGallery /> */}
-      <ParentCom />
+      {/* <ParentCom /> */}
+      <Test />
     </div>
   );
 }

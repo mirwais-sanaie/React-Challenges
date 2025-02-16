@@ -6,10 +6,10 @@ function Test() {
   const [sortOption, setSortOption] = useState("title");
 
   const filteredMovies = movies.filter((movie) => {
-    if (filterGenre) {
-      return movie.genre === filterGenre;
+    if (movie.genre === filterGenre) {
+      return movie;
     } else {
-      return movies;
+      return filterGenre === "";
     }
   });
 

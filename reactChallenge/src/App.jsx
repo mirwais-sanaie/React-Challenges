@@ -9,7 +9,8 @@
 // import StopWatch from "./components/Day-12(StopWatch)/StopWatch";
 // import TransferList from "./components/Day-13(Transfer List)/TransferList";
 // import LightBoxGallery from "./components/Day-14(Light box gallery)/LightBoxGallery";
-import Test from "./components/Day-17(Dynamic List & Filtering & Sorting)/Test";
+// import Test from "./components/Day-17(Dynamic List & Filtering & Sorting)/Test";
+import QuizApp from "./components/Day-18(QuizApp)/QuizApp";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -39,7 +40,8 @@ function App() {
       {/* <TransferList /> */}
       {/* <LightBoxGallery /> */}
       {/* <ParentCom /> */}
-      <Test />
+      {/* <Test /> */}
+      <QuizApp />
     </div>
   );
 }

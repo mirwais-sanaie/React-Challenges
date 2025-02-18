@@ -11,7 +11,8 @@
 // import LightBoxGallery from "./components/Day-14(Light box gallery)/LightBoxGallery";
 // import Test from "./components/Day-17(Dynamic List & Filtering & Sorting)/Test";
 // import QuizApp from "./components/Day-18(QuizApp)/QuizApp";
-import UnitConverter from "./components/Day-19(UnitConverter)/UnitConverter";
+// import UnitConverter from "./components/Day-19(UnitConverter)/UnitConverter";
+import WeatherWidget from "./components/Day-20(WeatherWidget)/WeatherWidget";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -43,7 +44,8 @@ function App() {
       {/* <ParentCom /> */}
       {/* <Test /> */}
       {/* <QuizApp /> */}
-      <UnitConverter />
+      {/* <UnitConverter /> */}
+      <WeatherWidget />
     </div>
   );
 }

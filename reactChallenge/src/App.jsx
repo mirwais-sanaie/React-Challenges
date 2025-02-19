@@ -15,6 +15,7 @@
 // import UnitConverter from "./components/Day-19(UnitConverter)/UnitConverter";
 import WeatherWidget from "./components/Day-20(WeatherWidget)/WeatherWidget";
 import ContactForm from "./components/Day-21(ContactForm)/ContactForm";
+import DragAndDrop from "./components/Day-22(DragAndDrop)/DragAndDrop";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -48,7 +49,8 @@ function App() {
       {/* <QuizApp /> */}
       {/* <UnitConverter /> */}
       {/* <WeatherWidget /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <DragAndDrop />
     </div>
   );
 }

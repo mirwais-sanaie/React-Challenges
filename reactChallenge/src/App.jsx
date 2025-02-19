@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import TabsChange from "./components/Day-1/TabsChange";
 // import DataTable from "./components/Day-2/DataTable";
 // import FileExplorer from "./components/Day-3(File Explorer)/FileExplorer";
@@ -13,6 +14,7 @@
 // import QuizApp from "./components/Day-18(QuizApp)/QuizApp";
 // import UnitConverter from "./components/Day-19(UnitConverter)/UnitConverter";
 import WeatherWidget from "./components/Day-20(WeatherWidget)/WeatherWidget";
+import ContactForm from "./components/Day-21(ContactForm)/ContactForm";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -45,7 +47,8 @@ function App() {
       {/* <Test /> */}
       {/* <QuizApp /> */}
       {/* <UnitConverter /> */}
-      <WeatherWidget />
+      {/* <WeatherWidget /> */}
+      <ContactForm />
     </div>
   );
 }

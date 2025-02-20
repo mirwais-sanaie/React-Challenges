@@ -1,0 +1,60 @@
+.todo-app {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-task-form {
+  margin-bottom: 20px;
+}
+
+.add-task-form input,
+.add-task-form textarea,
+.add-task-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.add-task-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-container {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

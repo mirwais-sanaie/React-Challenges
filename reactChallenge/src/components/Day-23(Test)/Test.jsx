@@ -2,34 +2,11 @@
 // import { useState } from "react";
 import { useState } from "react";
 import "./TodoCategory.css";
-const data = [
-  {
-    id: 1,
-    title: "Twee1",
-    description: "This is task 1",
-    category: "Work",
-  },
-  {
-    id: 2,
-    title: "Task 2",
-    description: "This is task 2",
-    category: "Personal",
-  },
-  {
-    id: 3,
-    title: "Task 3",
-    description: "This is task 3",
-    category: "Shopping",
-  },
-];
+const data = [];
 
 function Test() {
   const [tasks, setTasks] = useState(data);
-  const [categories, setCategories] = useState([
-    "Work",
-    "Personal",
-    "Shopping",
-  ]);
+  const [categories] = useState(["Work", "Personal", "Shopping"]);
   const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
   const [newCategory, setNewCategory] = useState("");
@@ -45,6 +22,19 @@ function Test() {
     setTasks([...tasks, newItem]);
 
     console.log(tasks);
+  };
+
+  const handleCompleteItem = (id) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, isComplete: !task.isComplete } : task
+    );
+    setTasks(updatedTasks);
+    console.log(updatedTasks);
+  };
+
+  const handleDelete = (id) => {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
+    setTasks(updatedTasks);
   };
 
   return (
@@ -92,11 +82,20 @@ function Test() {
             <div className="category-container" key={i}>
               <h2>{category}</h2>
               {categoryTask.map((task) => (
-                <div key={task.id}>
+                <div
+                  className={`task ${task.isComplete ? "completed" : ""}`}
+                  key={task.id}
+                >
                   <h3>{task.title}</h3>
                   <p>{task.description}</p>
-                  <button>
-                    {task.completed ? "Mark Incomplete" : "Mark Complete"}
+                  <button onClick={() => handleCompleteItem(task.id)}>
+                    {task.isComplete ? "Mark Incomplete" : "Mark Complete"}
+                  </button>
+                  <button
+                    onClick={() => handleDelete(task.id)}
+                    className="close"
+                  >
+                    &times;
                   </button>
                 </div>
               ))}

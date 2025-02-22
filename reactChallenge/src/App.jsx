@@ -6,6 +6,8 @@
 // import StarRating from "./components/Day-5(StarRating)/StarRating";
 // import TodoList from "./components/Day-6(Todo List)/TodoList";
 
+import Main from "./components/Day-24(NoteTakingApp)/Main";
+
 // import JobBoard from "./components/Day-11(Job Board-readMore)/JobBoard";
 // import StopWatch from "./components/Day-12(StopWatch)/StopWatch";
 // import TransferList from "./components/Day-13(Transfer List)/TransferList";
@@ -13,10 +15,10 @@
 // import Test from "./components/Day-17(Dynamic List & Filtering & Sorting)/Test";
 // import QuizApp from "./components/Day-18(QuizApp)/QuizApp";
 // import UnitConverter from "./components/Day-19(UnitConverter)/UnitConverter";
-import WeatherWidget from "./components/Day-20(WeatherWidget)/WeatherWidget";
-import ContactForm from "./components/Day-21(ContactForm)/ContactForm";
-import DragAndDrop from "./components/Day-22(DragAndDrop)/DragAndDrop";
-import Test from "./components/Day-23(Test)/Test";
+// import WeatherWidget from "./components/Day-20(WeatherWidget)/WeatherWidget";
+// import ContactForm from "./components/Day-21(ContactForm)/ContactForm";
+// import DragAndDrop from "./components/Day-22(DragAndDrop)/DragAndDrop";
+// import Test from "./components/Day-23(Test)/Test";
 
 // import TicTacToe from "./components/Day-9(TicTacToe game)/TicTacToe";
 // import TicTacToeCopy from "./components/Day-9(TicTacToe game)/TicTacToeCopy ";
@@ -52,7 +54,8 @@ function App() {
       {/* <WeatherWidget /> */}
       {/* <ContactForm /> */}
       {/* <DragAndDrop /> */}
-      <Test />
+      {/* <Test /> */}
+      <Main />
     </div>
   );
 }

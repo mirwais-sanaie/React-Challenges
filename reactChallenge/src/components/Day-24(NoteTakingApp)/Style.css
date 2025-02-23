@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+}
+.edit {
+  width: 50%;
+}
+.preview {
+  margin-top: 50px;
+}
+.notes {
+  display: grid;
+  grid-template-columns: 3;
+  list-style: none;
+}
+.note {
+  padding: 20px;
+}

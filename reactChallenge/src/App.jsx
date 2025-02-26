@@ -7,6 +7,7 @@
 // import TodoList from "./components/Day-6(Todo List)/TodoList";
 
 import Main from "./components/Day-24(NoteTakingApp)/Main";
+import Calculator from "./components/Day-25(calculator)/Calculator";
 
 // import JobBoard from "./components/Day-11(Job Board-readMore)/JobBoard";
 // import StopWatch from "./components/Day-12(StopWatch)/StopWatch";
@@ -55,7 +56,8 @@ function App() {
       {/* <ContactForm /> */}
       {/* <DragAndDrop /> */}
       {/* <Test /> */}
-      <Main />
+      {/* <Main /> */}
+      <Calculator />
     </div>
   );
 }

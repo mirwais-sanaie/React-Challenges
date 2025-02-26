@@ -8,6 +8,7 @@ function CreatingNote() {
   const [content, setContent] = useState("");
   const [newContent, setNewContent] = useState("");
   const { notes, handleNewNote, handleDeleteNote, setNotes } = useNoteContext();
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleChange = (value) => {
     setContent(value);
@@ -17,6 +18,7 @@ function CreatingNote() {
     setNewContent(value);
   };
   const handleSendData = () => {
+    if (!title || !content) return;
     handleNewNote(title, content);
     setTitle("");
     setContent("");
@@ -37,9 +39,19 @@ function CreatingNote() {
     setNewContent("");
   };
 
+  const filteredNotes = notes.filter((note) =>
+    note.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="container">
       <h1>Note-Taking App</h1>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search for note..."
+      />
       <div className="edit">
         <div style={{ display: "flex", flexDirection: "column" }}>
           <input
@@ -64,7 +76,7 @@ function CreatingNote() {
       <div>
         <h2>Your Notes:</h2>
         <ul className="notes">
-          {notes.map((note) => (
+          {filteredNotes.map((note) => (
             <li className="note" key={note.id}>
               <h3>{note.title}</h3>
               {note.isEdit ? (
